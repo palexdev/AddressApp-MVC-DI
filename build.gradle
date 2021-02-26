@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.gluonhq:ignite-spring:1.1.0'
+}
+
+javafx {
+    version = '15.0.1'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    setMainClassName("io.github.palexdev.addressapp.SpringApp")
+
+    // Workaround for newer Gradle versions (see https://github.com/java9-modularity/gradle-modules-plugin/issues/165)
+    modularity.disableEffectiveArgumentsAdjustment()
+}
