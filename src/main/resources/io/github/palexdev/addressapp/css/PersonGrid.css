@@ -1,0 +1,5 @@
+.person-grid {
+    -fx-border-color: #9F9F9F;
+    -fx-border-radius: 10;
+    -fx-border-insets: -5;
+}

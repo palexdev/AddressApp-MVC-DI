@@ -1,0 +1,74 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Buchman",
+    "city": "San Antonio",
+    "street": "828  Bell Street",
+    "postalCode": 78205,
+    "birthday": "28/gennaio/1970"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Bumgarner",
+    "city": "Harrison",
+    "street": "3522  Taylor Street",
+    "postalCode": 10528,
+    "birthday": "24/maggio/1995"
+  },
+  {
+    "firstName": "Jerry",
+    "lastName": "Anderson",
+    "city": "Newark",
+    "street": "3320  Robinson Lane",
+    "postalCode": 43055,
+    "birthday": "14/marzo/1985"
+  },
+  {
+    "firstName": "Franklin",
+    "lastName": "Ray",
+    "city": "Omak",
+    "street": "707  Goodwin Avenue",
+    "postalCode": 98841,
+    "birthday": "03/settembre/1960"
+  },
+  {
+    "firstName": "Austin",
+    "lastName": "Malone",
+    "city": "THREE RIVERS",
+    "street": "1319  Thorn Street",
+    "postalCode": 78071,
+    "birthday": "26/dicembre/1977"
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Fletcher",
+    "city": "Farmington",
+    "street": "4688  Reel Avenue",
+    "postalCode": 41731,
+    "birthday": "29/febbraio/2000"
+  },
+  {
+    "firstName": "April",
+    "lastName": "Altman",
+    "city": "BAUDETTE",
+    "street": "4049  Hinkle Deegan Lake Road",
+    "postalCode": 56623,
+    "birthday": "12/marzo/1998"
+  },
+  {
+    "firstName": "Alvin",
+    "lastName": "Dunn",
+    "city": "Portal",
+    "street": "4101  Findley Avenue",
+    "postalCode": 58772,
+    "birthday": "12/marzo/1999"
+  },
+  {
+    "firstName": "Sandra",
+    "lastName": "Gross",
+    "city": "Atmore",
+    "street": "1174  George Avenue",
+    "postalCode": 36502,
+    "birthday": "24/novembre/1984"
+  }
+]

@@ -1,0 +1,57 @@
+.root-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #9F9F9F;
+    -fx-border-radius: 3;
+    -fx-border-width: 1.5;
+}
+
+.menu-bar {
+    -fx-background-color: rgb(240, 240, 240);
+    -fx-background-radius: 10;
+}
+
+.menu-bar .context-menu {
+    -fx-background-radius: 5;
+    -fx-background-insets: 4 1 4 1;
+    -fx-min-width: 100;
+}
+
+.menu-bar .menu-button {
+    -fx-pref-width: 50;
+    -fx-pref-height: 28;
+}
+
+.menu-bar .menu-button .label {
+    -fx-alignment: center;
+}
+
+.menu-bar .menu-button:hover,
+.menu-bar .menu-button:showing {
+    -fx-background-color: rgb(120, 150, 255);
+    -fx-background-insets: 3 0 3 0;
+    -fx-background-radius: 5;
+
+}
+
+.menu-bar .menu-item:hover,
+.menu-bar .menu-item:focused {
+    -fx-background-color: rgb(120, 150, 255);
+    -fx-background-radius: 5;
+}
+
+#closeIcon {
+    -fx-background-color: rgb(255, 187, 187);
+}
+
+#closeIcon:hover {
+    -fx-background-color: rgb(255, 92, 92);
+}
+
+#minimizeIcon {
+    -fx-background-color: rgb(173, 225, 255);
+}
+
+#minimizeIcon:hover {
+    -fx-background-color: rgb(120, 150, 255);
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "firstName": "Shaw",
+    "lastName": "Readdie",
+    "city": "Kingsport",
+    "street": "2754  Public Works Drive",
+    "postalCode": 37663,
+    "birthday": "28/gennaio/1970"
+  },
+  {
+    "firstName": "Lonnie",
+    "lastName": "Dane",
+    "city": "White Rock",
+    "street": "4884  Haul Road",
+    "postalCode": 55027,
+    "birthday": "24/maggio/1995"
+  },
+  {
+    "firstName": "Tia",
+    "lastName": "Pilgrim",
+    "city": "Arlington Heights",
+    "street": "4574  Emeral Dreams Drive",
+    "postalCode": 60005,
+    "birthday": "14/marzo/1985"
+  },
+  {
+    "firstName": "Liberty",
+    "lastName": "Ward",
+    "city": "LA MESA",
+    "street": "2040  Hill Street",
+    "postalCode": 88044,
+    "birthday": "03/settembre/1960"
+  },
+  {
+    "firstName": "Etta",
+    "lastName": "Low",
+    "city": "Parigi",
+    "street": "4057  Corpening Drive",
+    "postalCode": 60025,
+    "birthday": "26/dicembre/1977"
+  },
+  {
+    "firstName": "Aria",
+    "lastName": "Watkins",
+    "city": "Miami",
+    "street": "1193  Poplar Lane",
+    "postalCode": 33179,
+    "birthday": "29/febbraio/2000"
+  },
+  {
+    "firstName": "Jervis",
+    "lastName": "Kitchens",
+    "city": "Sumter",
+    "street": "656  Emily Drive",
+    "postalCode": 29150,
+    "birthday": "12/marzo/1999"
+  }
+]

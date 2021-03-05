@@ -1,52 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXIconWrapper?>
+<?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.paint.Color?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1">
-   <MenuBar VBox.vgrow="NEVER">
-      <Menu mnemonicParsing="false" text="File">
-         <MenuItem mnemonicParsing="false" text="New"/>
-         <MenuItem mnemonicParsing="false" text="Open…"/>
-         <Menu mnemonicParsing="false" text="Open Recent"/>
-         <SeparatorMenuItem mnemonicParsing="false"/>
-         <MenuItem mnemonicParsing="false" text="Close"/>
-         <MenuItem mnemonicParsing="false" text="Save"/>
-         <MenuItem mnemonicParsing="false" text="Save As…"/>
-         <MenuItem mnemonicParsing="false" text="Revert"/>
-         <SeparatorMenuItem mnemonicParsing="false"/>
-         <MenuItem mnemonicParsing="false" text="Preferences…"/>
-         <SeparatorMenuItem mnemonicParsing="false"/>
-         <MenuItem mnemonicParsing="false" text="Quit"/>
-      </Menu>
-      <Menu mnemonicParsing="false" text="Edit">
-         <MenuItem mnemonicParsing="false" text="Undo"/>
-         <MenuItem mnemonicParsing="false" text="Redo"/>
-         <SeparatorMenuItem mnemonicParsing="false"/>
-         <MenuItem mnemonicParsing="false" text="Cut"/>
-         <MenuItem mnemonicParsing="false" text="Copy"/>
-         <MenuItem mnemonicParsing="false" text="Paste"/>
-         <MenuItem mnemonicParsing="false" text="Delete"/>
-         <SeparatorMenuItem mnemonicParsing="false"/>
-         <MenuItem mnemonicParsing="false" text="Select All"/>
-         <MenuItem mnemonicParsing="false" text="Unselect All"/>
-      </Menu>
-      <Menu mnemonicParsing="false" text="Help">
-         <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
-      </Menu>
-   </MenuBar>
-   <AnchorPane VBox.vgrow="ALWAYS">
-      <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;"
-             text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f">
-         <font>
-            <Font size="18.0"/>
-         </font>
-      </Label>
-   </AnchorPane>
-</VBox>
+<StackPane prefHeight="720.0" prefWidth="1360.0" styleClass="root-pane" stylesheets="@../css/MainView.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.palexdev.addressapp.controller.MainViewController">
+   <VBox fx:id="box">
+      <MenuBar>
+         <VBox.margin>
+            <Insets left="7.0" right="7.0" top="7.0" />
+         </VBox.margin>
+         <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open...">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Save as...">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+               </accelerator></MenuItem>
+         </Menu>
+         <Menu mnemonicParsing="false" text="Tools">
+            <MenuItem fx:id="addMenu" mnemonicParsing="false" text="Add" />
+            <MenuItem fx:id="removeMenu" mnemonicParsing="false" text="Remove" />
+            <MenuItem fx:id="editMenu" mnemonicParsing="false" text="Edit" />
+            <MenuItem mnemonicParsing="false" onAction="#handleShowStats" text="Show stats..." />
+         </Menu>
+         <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+         </Menu>
+      </MenuBar>
+   </VBox>
+   <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" spacing="10.0" StackPane.alignment="TOP_RIGHT">
+      <StackPane.margin>
+         <Insets right="5.0" top="5.0" />
+      </StackPane.margin>
+      <padding>
+         <Insets left="5.0" right="5.0" />
+      </padding>
+      <MFXIconWrapper id="minimizeIcon" fx:id="minimizeIcon" prefHeight="20.0" prefWidth="20.0" />
+      <MFXIconWrapper id="closeIcon" fx:id="closeIcon" onMousePressed="#handleExit" prefHeight="20.0" prefWidth="20.0" />
+   </HBox>
+   <MFXLabel fx:id="changesLabel" labelStyle="STYLE2" maxWidth="-Infinity" opacity="0.0" prefWidth="300.0" promptText="" style="-fx-border-color: #ff4500;" text="!!Detected Unsaved Changes!!" StackPane.alignment="BOTTOM_LEFT">
+      <StackPane.margin>
+         <Insets bottom="60.0" left="10.0" right="10.0" top="60.0" />
+      </StackPane.margin>
+      <textFill>
+         <Color red="1.0" green="0.2705882489681244" />
+      </textFill>
+   </MFXLabel>
+   <MFXLabel fx:id="title" graphicTextGap="10.0" labelStyle="STYLE2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="" style="-fx-border-color: #5200ed;" StackPane.alignment="BOTTOM_LEFT">
+      <StackPane.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </StackPane.margin>
+   </MFXLabel>
+</StackPane>

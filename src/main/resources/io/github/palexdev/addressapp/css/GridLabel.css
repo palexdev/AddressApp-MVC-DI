@@ -1,0 +1,8 @@
+.grid-label {
+    -fx-border-color: white;
+}
+
+.grid-label:editable {
+    -fx-border-color: transparent transparent rgb(76, 0, 225) transparent;
+;
+}

@@ -1,0 +1,25 @@
+.dialog-label {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.dialog-label,
+.dialog-label:focused {
+    -fx-border-color: rgb(76, 0, 225);
+}
+
+.person-grid {
+    -fx-border-color: white;
+}
+
+.mfx-icon-wrapper .ripple-generator {
+    -mfx-ripple-color: rgb(255, 92, 92);
+}
+
+#okButton .ripple-generator {
+    -mfx-ripple-color: rgb(173, 225, 255);
+}
+
+#cancelButton .ripple-generator {
+    -mfx-ripple-color: rgb(255, 92, 92);
+}

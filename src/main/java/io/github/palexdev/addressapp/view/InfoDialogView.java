@@ -10,8 +10,8 @@ import javax.inject.Singleton;
 import java.io.IOException;
 
 @Singleton
-public class MainView implements View {
-    private final String fxml = "fxml/MainView.fxml";
+public class InfoDialogView implements View {
+    private final String fxml = "fxml/InfoDialog.fxml";
 
     @Inject
     private FXMLLoader fxmlLoader;

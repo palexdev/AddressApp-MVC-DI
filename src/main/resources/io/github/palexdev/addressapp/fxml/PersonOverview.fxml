@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<SplitPane fx:id="pane" dividerPositions="0.45" prefHeight="720.0" prefWidth="1360.0" stylesheets="@../css/PersonOverview.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.palexdev.addressapp.controller.PersonOverviewController">
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+      <MFXLabel fx:id="repoLabel" graphicTextGap="10.0" labelStyle="STYLE2" promptText="" style="-fx-border-color: rgb(76, 0, 225);" text="People Repository" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+       <MFXScrollPane fitToWidth="true" prefHeight="318.0" prefWidth="566.0" AnchorPane.bottomAnchor="100.0"
+                      AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0">
+           <MFXTableView fx:id="table" prefHeight="350.0" prefWidth="500.0"/>
+       </MFXScrollPane>
+   </AnchorPane>
+   <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+      <MFXLabel fx:id="personLabel" graphicTextGap="10.0" labelStyle="STYLE2" promptText="" style="-fx-border-color: rgb(76, 0, 225);" text="Person Overview" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <StackPane fx:id="gridContainer" maxHeight="-Infinity" maxWidth="-Infinity" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0" />
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="50.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <MFXButton fx:id="addButton" buttonType="RAISED" depthLevel="LEVEL1" prefHeight="26.0" prefWidth="120.0" rippleRadius="40.0" text="Add" />
+         <MFXButton fx:id="removeButton" buttonType="RAISED" depthLevel="LEVEL1" prefHeight="26.0" prefWidth="120.0" rippleRadius="40.0" text="Remove" />
+         <MFXButton fx:id="editButton" buttonType="RAISED" depthLevel="LEVEL1" prefHeight="26.0" prefWidth="120.0" rippleRadius="40.0" text="Edit" />
+      </HBox>
+   </AnchorPane>
+</SplitPane>

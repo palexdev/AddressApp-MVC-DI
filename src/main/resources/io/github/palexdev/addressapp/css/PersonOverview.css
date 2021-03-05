@@ -1,0 +1,15 @@
+.split-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #9F9F9F;
+    -fx-background-radius: 5;
+    -fx-padding: 1.5;
+}
+
+.mfx-button:disabled {
+    -fx-background-color: rgb(237, 237, 237);
+    -fx-opacity: 1;
+}
